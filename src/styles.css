@@ -1,0 +1,245 @@
+body {
+  background: #ffc857;
+  color: #323031;
+  font-size: 2em;
+  font-family: "Permanent Marker", cursive;
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  text-align: center;
+  margin-top: 20px;
+}
+.header-cart {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: -50px;
+}
+.header-cart a {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+}
+.header-cart span {
+  margin: 0 8px;
+}
+.feather-shopping-cart {
+  width: 25px;
+}
+.logo-title {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 2.3em;
+  color: #177e89;
+  text-shadow: 3px 3px rgba(6, 56, 163, 0.733);
+}
+.logo-image {
+  height: auto;
+  width: 200px;
+  border-radius: 50%;
+  filter: drop-shadow(5px 5px 0 #444) drop-shadow(-5px 5px 0 #444)
+    drop-shadow(5px -5px 0 #444) drop-shadow(-5px -5px 0 #444);
+}
+.good-dogs-brent {
+  font-size: 0.6em;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+nav .nav-item {
+  flex-basis: 20%;
+}
+nav a,
+.footer-div a,
+.notCurrentUser a,
+.header-cart a {
+  text-decoration: none;
+  color: #323031;
+}
+nav a:hover,
+.footer-div a:hover,
+.notCurrentUser a:hover {
+  color: #177e89;
+}
+main {
+  padding-top: 10px;
+  background: #f3de64;
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main p {
+  width: 75%;
+}
+.product-cards-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.card {
+  box-shadow: 2px 2px 2px rgb(111, 119, 89);
+  border-radius: 15px;
+  padding: 15px;
+  margin: 20px;
+  width: 260px;
+  background-color: #f8e682;
+}
+.card h3 {
+  font-size: 0.8em;
+}
+.card p {
+  font-size: 0.7em;
+  font-family: "Josefin Sans", sans-serif;
+}
+.card img {
+  width: 100px;
+  margin: 2px 0 5px 5px;
+  float: right;
+}
+.addToCartButton {
+  border-radius: 5px;
+  height: 2.5rem;
+  align-content: flex-end;
+  transition: transform 0.17s;
+}
+.addToCartButton:hover {
+  /* transform: translate(1px, 1px); */
+  transform: rotate(-1.2deg);
+  transition: transform 0.17s;
+}
+.addToCartButton:active {
+  /* transform: translate(2px, 2px); */
+  transform: rotateZ(1.2deg);
+  transition: transform 0.17s;
+}
+
+.buyPageForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.buyPageForm input,
+.buyPageForm textarea {
+  border-radius: 4px;
+  margin: 3px;
+  padding: 6px;
+  width: 98%;
+}
+.buyPageForm textarea {
+  width: 100%;
+}
+.notCurrentUser,
+.notCurrentUser a {
+  font-size: 1.2rem;
+  color: #177e89;
+  display: inline-block;
+}
+.notCurrentUser:hover,
+.notCurrentUser a:hover {
+  color: #06a6b8;
+  transform: translate(0.5px, 0.5px);
+}
+.cartList {
+  list-style: none;
+}
+.cartTable {
+  font-size: 1.3rem;
+  border-collapse: collapse;
+}
+.cartProductRow:nth-child(odd) {
+  background: #ffc857;
+}
+.cartProductRow button {
+  border-radius: 5px;
+  margin: 0 9px;
+}
+.bottomOfTable {
+  border-top: 1px solid black;
+}
+
+td {
+  padding-right: 25px;
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 0 10px;
+}
+.footer-div {
+  flex-basis: 30%;
+  margin-bottom: 20px;
+}
+.footer-div h5 {
+  margin-bottom: 5px;
+}
+.footer-div:nth-child(2) {
+  text-align: center;
+}
+
+.footer-div:last-child {
+  text-align: right;
+}
+footer svg {
+  width: 1.5em;
+  margin: 5px;
+}
+footer li {
+  list-style: none;
+  font-size: 0.6em;
+}
+@media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+  footer {
+    flex-direction: column;
+  }
+}
+/* loading spinner */
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #177e89;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+/* end loading spinner */
