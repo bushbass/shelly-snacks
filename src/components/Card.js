@@ -2,7 +2,6 @@ import React from 'react';
 import pawPrintDogTreats from '../images/paw-print-dog-treats-smaller.jpg';
 import { convertCentsToDollars } from '../helpers';
 import AddToCartButton from './AddToCartButton';
-import HeaderCartLink from './HeaderCartLink';
 
 const Card = ({
   idFromBackend,
@@ -25,7 +24,6 @@ const Card = ({
         price={price}
         packageSize={packageSize}
       />
-      <HeaderCartLink />
     </div>
   );
 };
