@@ -16,26 +16,31 @@ export default function App() {
   const [firstName, setFirstName] = useState("");
   const [cart, setCart] = useState([]);
 
-  const handleLoginChange = event => setFirstName(event.target.value);
+  const handleLoginChange = (event) => setFirstName(event.target.value);
 
-  const handleLogin = event => {
+  const handleLogin = (event) => {
     event.preventDefault();
     setCurrentUser(firstName);
   };
   const handleLogout = () => {
     setCurrentUser(null);
   };
-  const addToCart = product => {
+  const addToCart = (product) => {
     setCart([...cart, product]);
   };
+  const emptyCart = () => {
+    setCart([]);
+  };
 
-  const decrementCartItem = product => {
-    const itemToRemove = cart.findIndex(item => product === item.idFromBackend);
+  const decrementCartItem = (product) => {
+    const itemToRemove = cart.findIndex(
+      (item) => product === item.idFromBackend
+    );
     cart.splice(itemToRemove, 1);
     setCart([...cart]);
   };
 
-  const incrementCartItem = product => {
+  const incrementCartItem = (product) => {
     setCart([...cart, product]);
   };
   return (
@@ -49,6 +54,7 @@ export default function App() {
         handleLogin,
         handleLogout,
         addToCart,
+        emptyCart,
         decrementCartItem,
         incrementCartItem
       }}

@@ -50,7 +50,7 @@ const ViewCart = () => {
             </tr>
           </thead>
           <tbody>
-            {Object.entries(combinedCurrentCart).map(item => (
+            {Object.entries(combinedCurrentCart).map((item) => (
               <tr className="cartProductRow" key={uuidv4()}>
                 <td>{item[0]}</td>
                 <td>
@@ -80,7 +80,23 @@ const ViewCart = () => {
               </tr>
             ))}
             <tr className="bottomOfTable">
-              <td colSpan="2" />
+              {/* {cart.cart.length?<td colSpan="2" />:(<td></td><td><button onClick={cart.emptyCart} className="addToCartButton">Empty Cart</button></td>)} */}
+              {cart.cart.length > 0 ? (
+                <>
+                  <td> </td>
+                  <td>
+                    <button
+                      onClick={cart.emptyCart}
+                      className="addToCartButton emptyCartButton"
+                    >
+                      Empty Cart
+                    </button>
+                  </td>
+                </>
+              ) : (
+                <td colSpan="2" />
+              )}
+
               <td>Subtotal</td>
               <td>{convertCentsToDollars(subtotal)}</td>
             </tr>
