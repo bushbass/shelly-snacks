@@ -119,6 +119,9 @@ main p {
   transform: rotateZ(1.2deg);
   transition: transform 0.17s;
 }
+.emptyCartButton {
+  height: 25px;
+}
 
 .buyPageForm {
   display: flex;
